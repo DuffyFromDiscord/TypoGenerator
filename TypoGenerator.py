@@ -13,9 +13,7 @@ secondpress = False
 def clipboard_typo(text):
     e = ''
     for i in text:
-        print('"{}"'.format(i))
         if random.choice([1, 2, 3, 4, 5, 6]) == 4:
-            print('before: '+i)
             if i in 'abcdefghijklmnopwrstuvwxyz':
                 i = random.choice('abcdefghijklmnopwrstuvwxyz')
             elif i in 'abcdefghijklmnopwrstuvwxyz'.upper():
@@ -26,9 +24,7 @@ def clipboard_typo(text):
                 e += '  '
             elif i == '.'
                 e += random.choice(',<>/?;:')
-            print('after: '+i)
         e += i
-    print('Randomized clipboard to {}'.format(e))
     pyperclip.copy(e)
 
 
